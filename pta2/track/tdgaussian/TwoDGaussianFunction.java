@@ -17,7 +17,7 @@ public class TwoDGaussianFunction {
 	
 	/**
 	 * @param data	input data 
-	 * @param x_width	input data width 
+	 * @param data_width	input data width 
 	 */
 	public TwoDGaussianFunction(int data_width,int data_size) {
 
