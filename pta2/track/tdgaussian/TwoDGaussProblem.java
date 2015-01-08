@@ -34,6 +34,9 @@ public class TwoDGaussProblem {
 		buildlsb();
 	}
 	
+	/**
+	 * build LeastSquareProblem by using constructer data
+	 */
 	private void buildlsb() {
 		//construct two-dimensional Gaussian function
 		TwoDGaussianFunction tdgf = new TwoDGaussianFunction(this.data_width,this.data.length);
@@ -54,11 +57,11 @@ public class TwoDGaussProblem {
 		
 		lsp = lsb.build();
 	}
-
-	public TwoDGaussProblem(LeastSquaresProblem lsp) {
-		this.lsp = lsp;
-	}
 	
+	/**
+	 * Do two dimensional Gaussian fit
+	 * @return return the fitted data as Optimum
+	 */
 	public Optimum fit2dGauss() {
 		LevenbergMarquardtOptimizer lmo = new LevenbergMarquardtOptimizer();
 		LeastSquaresOptimizer.Optimum lsoo = lmo.optimize(lsp);
